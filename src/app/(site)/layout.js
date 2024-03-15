@@ -1,7 +1,9 @@
+import Navigation from "@/components/navigation/navigation";
 
 export default function siteLayout({ children }) {
     return <div>
-        <span>[site layout]</span>
-        {children}
+        <Navigation>
+            {children}
+        </Navigation>
     </div>
 }
