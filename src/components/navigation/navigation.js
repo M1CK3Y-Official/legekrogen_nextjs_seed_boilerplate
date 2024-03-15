@@ -9,6 +9,21 @@ const Navigation = () => {
 
     const [isOpen, setIsOpen] = useState(false);  
 
+    let menu = [
+        {
+            name: 'Produkter',
+            path: '/produkter'
+        },
+        {
+            name: 'FAQ',
+            path: '/faq'
+        },
+        {
+            name: 'Kundeklubben',
+            path: '/kundeklub'
+        }
+    ]
+
     return ( 
 
         <div className={styles.nav}>
@@ -23,7 +38,10 @@ const Navigation = () => {
             </div>
 
             <div className={`${styles.dropdown} ${isOpen ? styles.open : ''}`}>
-                <Link href={'/'}><div className={styles.dropdownMenu}>Hej</div></Link>
+                {menu.map((item) => {
+
+                    return <Link key={item.name} className={styles.link} href={item.path}><div className={styles.dropdownMenu}>{item.name}</div></Link>
+                })}
             </div>
 
         </div>

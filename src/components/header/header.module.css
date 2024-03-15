@@ -1,0 +1,12 @@
+.header {
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    height: 768px;
+}
+
+.header img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
