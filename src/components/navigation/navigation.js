@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import styles from './navigation.module.css';
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaTruck  } from "react-icons/fa";
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -27,6 +27,9 @@ const Navigation = () => {
     return ( 
 
         <div className={styles.nav}>
+            <div className={styles.shipping}>
+                <p><FaTruck className={styles.truck}/>&nbsp; Fri fragt ved køb over 499,-</p>
+            </div>
             <div className={styles.navBar}>
                 <div className={styles.logo}>
                     <Image src="/logo/legekrogen_logo.png" alt="logo" width={359} height={134} />
@@ -40,7 +43,7 @@ const Navigation = () => {
             <div className={`${styles.dropdown} ${isOpen ? styles.open : ''}`}>
                 {menu.map((item) => {
 
-                    return <Link key={item.name} className={styles.link} href={item.path}><div className={styles.dropdownMenu}>{item.name}</div></Link>
+                    return <Link key={item.name} onClick={() => setIsOpen(!isOpen)} className={styles.link} href={item.path}><div className={styles.dropdownMenu}>{item.name}</div></Link>
                 })}
             </div>
 

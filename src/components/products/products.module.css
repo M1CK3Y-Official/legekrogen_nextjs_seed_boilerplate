@@ -1,0 +1,39 @@
+.list {
+    display: grid;
+    gap: 60px;
+    margin: 0 auto;
+    justify-content: center;
+    /* background-color: var(--color-pink); */
+}
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 60px 0 100px 0;
+    /* padding: 0 15px; */
+    background-color: var(--color-pink);
+
+}
+.heading1 {
+    font-size: 40px;
+    color: white;
+    letter-spacing: 2px;
+}
+.heading2 {
+    font-size: 45px;
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1.13px;
+}
+.title {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+    .list {
+        grid-template-columns: repeat(2, 325px);
+        gap: 30px;
+    }
+}

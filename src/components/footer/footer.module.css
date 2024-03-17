@@ -1,0 +1,35 @@
+.footer {
+    background-color: var(--color-nav);
+    padding: 40px 0 55px 0;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.title {
+    font-size: 40px;
+}
+.contact p {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.icon {
+    font-size: 15px;
+    
+}
+.socials {
+    margin-top: 40px;
+}
+
+.icons {
+    font-size: 50px;
+    gap: 5px;
+    display: flex;
+}
