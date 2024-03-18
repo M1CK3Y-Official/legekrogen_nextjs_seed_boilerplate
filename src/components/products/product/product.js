@@ -2,12 +2,15 @@
 import styles from './product.module.css';
 import Image from 'next/image';
 import { squarepegFont } from '@/utils/fonts';
+import { useBasket } from '@/context/basket';
 
 export const DiscountBox = ({percent}) => {
     return <span className={styles.percent}>{percent}%</span>
 }
 
 const Product = ({product}) => {
+
+    const {basket, addToBasket} = useBasket();
 
     return (
         <div className={styles.productCard}>
@@ -22,9 +25,9 @@ const Product = ({product}) => {
                     <p className={styles.productTitle}>Tandlægesæt i træ</p>
                 </div>
                 <p className={styles.price}>{product.price},00 kr.</p>
-                {/* <button className={styles.productBuyBtn} onClick={() => addToBasket(product._id, product.amount)}>Køb</button> */}
             </div>
-                <button className={styles.productBuyBtn}>Køb</button>
+                <button className={styles.productBuyBtn} onClick={() => addToBasket(product._id, product.amount)}>Køb</button>
+                {/* <button className={styles.productBuyBtn}>Køb</button> */}
 
         </div>
     )
