@@ -1,17 +1,21 @@
 import Image from 'next/image';
 import styles from './header.module.css'
 import { squarepegFont } from '@/utils/fonts';
-const Header = () => {
+
+const Header = ({config}) => {
 
     return (
         <div className={styles.header}>
 
-            <Image src="/heros/forsiden.jpg" alt="forside" width={863} height={1300} />
+            <Image src={config.image} alt="forside" width={config.w} height={config.h} />
+            
+            <div className={`${styles.text} ${config.header?.forside === true ? styles.forside : ''}`}>
+                <h1 className={`${styles.title} ${squarepegFont.className}`} style={{fontSize : config.header.one?.size, letterSpacing : config.header.one?.ls}} >{config.header.one.text}</h1>
+                {config.header?.two ? <h1 className={`${styles.title} ${styles.two}`}>{config.header?.two.text}</h1> : ''}
 
-            <div className={styles.text}>
-                <h1 className={`${styles.title} ${squarepegFont.className}`}>At lege er at leve</h1>
-                <p className={styles.body}>Her hos os har vi et stort udvalg af legetøj i høj kvalitet</p>
+                {config?.body ? <p className={styles.body}>{config?.body.text}</p> : ''}
             </div>
+
         </div>
     )
 

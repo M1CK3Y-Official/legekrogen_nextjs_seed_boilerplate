@@ -1,0 +1,47 @@
+.container {
+    padding: 80px 25px;
+    margin: 0 auto;
+    max-width: 1024px;
+    
+}
+
+.heading1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.heading2 {
+    font-size: 45px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1.13px;
+}
+.title {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    color: var(--color-nav);
+}
+
+.list {
+    display: grid;
+    gap: 60px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    color: var(--color-nav);
+    max-width: 475px;
+    margin: 0 auto;
+}
+
+.reviewAuthor {
+    color: var(--color-purple);
+    font-size: 24px
+    
+}
+.reviewText {
+    font-size: 18px;
+}

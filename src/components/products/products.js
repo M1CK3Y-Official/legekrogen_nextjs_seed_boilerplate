@@ -24,8 +24,17 @@ const Products = ({recommended}) => {
     return (
         <div className={styles.container}>
             <div className={styles.title}>
-                <h1 className={`${styles.heading1} ${squarepegFont.className}`}>Et udpluk af vores</h1>
-                <h1 className={styles.heading2}>legetøj</h1>
+                {recommended === true ? (
+                    <>
+                        <h1 className={`${styles.heading1} ${squarepegFont.className}`}>Et udpluk af vores</h1>
+                        <h1 className={styles.heading2}>legetøj</h1>
+                    </>
+                ) : (
+                    <>
+                        <h1 className={`${styles.heading1} ${squarepegFont.className}`}>Alt vores</h1>
+                        <h1 className={styles.heading2}>legetøj</h1>
+                    </>
+                )}
             </div>
 
             <div className={styles.list}>

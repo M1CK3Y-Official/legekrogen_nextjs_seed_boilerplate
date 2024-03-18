@@ -13,6 +13,12 @@
   --font-body: 18px;
 
 }
+@media screen and (min-width: 768px) {
+  :root {
+    --font-heading: 90px;
+    --font-body: 20px;
+  }
+}
 
 * {
   box-sizing: border-box;

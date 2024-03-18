@@ -1,0 +1,43 @@
+.heading {
+    font-size: var(--font-heading);
+    margin-bottom: 30px;
+}
+
+.container {
+    color: var(--color-nav);
+    text-align: center;
+    padding: 60px 25px 100px 25px;
+    background-color: var(--color-shipping);
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.subHeading {
+    font-size: var(--font-body);
+    max-width: 330px;
+    margin: 0 auto;
+}
+
+.button {
+    font-size: var(--font-body);
+    color: white;
+    background-color: var(--color-nav);
+    /* padding: 15px 20px; */
+    height: 45px;
+    border-radius: 50rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+@media screen and (min-width: 768px) {
+    .button {
+        max-width: 400px;
+    }
+    .button:hover {
+        cursor: pointer;
+    }
+}
