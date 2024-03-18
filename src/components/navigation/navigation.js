@@ -32,7 +32,7 @@ const Navigation = () => {
             </div>
             <div className={styles.navBar}>
                 <div className={styles.logo}>
-                    <Image src="/logo/legekrogen_logo.png" alt="logo" width={359} height={134} />
+                    <Link href={'/'}><Image src="/logo/legekrogen_logo.png" alt="logo" width={359} height={134} /></Link>
                 </div>
 
                 <div className={styles.actions}>

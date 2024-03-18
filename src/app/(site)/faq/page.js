@@ -1,7 +1,7 @@
 "use client"
 import Header from '@/components/header/header';
 import styles from './page.module.css'
-import Products from '@/components/products/products';
+import Accordions from '@/components/accordions/accordions';
 import Medlem from '@/components/medlem/medlem';
 
 export default function Page() {
@@ -11,17 +11,21 @@ export default function Page() {
         header: {
             forside: false,
           one: {
-            text: 'På udkig efter nyt',
+            text: 'Har du nogle',
             ls: '2px',
           },
           two: {
-            text: 'Legetøj?',
+            text: 'Spørgsmål?',
           }
         },
     
-        image: '/heros/produkter.jpg',
-        w: 1064,
-        h: 1064,
+        image: '/heros/FAQ.jpg',
+        w: 395,
+        h: 595,
+
+        body: {
+            text: 'Måske er de allerede besvaret herunder. Ellers er du altid velkommen til at kontakte os',
+        },
     
         bodyBackground: 'var(--color-light-pink)',
     }
@@ -29,7 +33,8 @@ export default function Page() {
   return ( 
   <div className={styles.page}>
     <Header config={headerConfig} />
-      <Medlem />
+        <Accordions />
+        <Medlem />
 
   </div>
   )
