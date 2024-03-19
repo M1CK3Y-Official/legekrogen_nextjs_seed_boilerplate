@@ -1,7 +1,7 @@
 "use client"
 import Header from '@/components/header/header';
 import styles from './page.module.css'
-import SubscribeForm from '@/components/subscribe/subscribeForm/subscribeForm';
+import Subscribe from '@/components/subscribe/subscribe';
 import Medlem from '@/components/medlem/medlem';
 import { squarepegFont } from '@/utils/fonts';
 
@@ -32,7 +32,7 @@ export default function Page() {
   return ( 
   <div className={styles.page}>
     <Header config={headerConfig} />
-        <SubscribeForm />
+        <Subscribe />
 
   </div>
   )

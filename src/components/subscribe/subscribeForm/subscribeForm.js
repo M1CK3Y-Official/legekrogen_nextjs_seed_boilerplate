@@ -1,9 +1,8 @@
-'use client';
 import styles from './subscribeForm.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { squarepegFont } from '@/utils/fonts';
+
 
 
 const SubscribeForm = ({setFormSubmitted, setSubscriberName}) => {
@@ -11,40 +10,34 @@ const SubscribeForm = ({setFormSubmitted, setSubscriberName}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // let dataToSend = {
-        //     name: e.target.name.value,
-        //     email: e.target.email.value,
-        //     message: e.target.message.value,
-        // }
+        let dataToSend = {
+            'name': e.target.name.value,
+            'email': e.target.email.value,
+            'message': e.target.message.value,
+        }
 
-        // fetch(`/api/subscriber`, {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(dataToSend),
-        // }).then(res => res.json()).then(data => {
-        //     console.log(data);
-        //     setSubscriberName(data.name);
-        //     setFormSubmitted(true);
+        fetch(`/api/subscriber`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataToSend),
+        }).then(res => res.json()).then(data => {
+            console.log(data.data);
+            setSubscriberName(data.data.name);
+            setFormSubmitted(true);
         
-        // });
+        });
 
     };
 
     return ( <div>
             <form className={styles.form} id='form' onSubmit={handleSubmit}>
-                <div className={styles.field}>
-                    <input className={squarepegFont.className} type="text" name='name' placeholder='Fulde navn' required/>
-                </div>
+                <input className={squarepegFont.className} name='name' type='text' placeholder='Fulde navn' />
 
-                <div className={styles.field}>
-                    <input className={squarepegFont.className} type="email" name='email' placeholder='Email' required/>
-                </div>
+                <input className={squarepegFont.className} type="email" name='email' placeholder='Email' />
 
-                <div className={styles.field}>
-                    <textarea className={squarepegFont.className} name='message' placeholder='Hvem køber du legetøj til?'></textarea>
-                </div>
+                <textarea className={squarepegFont.className} name='message' placeholder='Hvem køber du legetøj til?'></textarea>
 
                 <button className={styles.submitBtn}  type="submit">Bliv medlem nu!</button>
             </form>

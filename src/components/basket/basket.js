@@ -77,7 +77,7 @@ const Basket = () => {
                     })}
                     <div className={styles.totalPriceContainer}>
                         <div className={styles.totalPrice}>
-                            <p className={styles.total}>ialt</p> <p><b>{totalPrice},00 kr.</b></p>
+                            <p className={styles.total}>ialt</p> &nbsp;<p><b>{totalPrice},00 kr.</b></p>
                         </div>
                     </div>
                 </>

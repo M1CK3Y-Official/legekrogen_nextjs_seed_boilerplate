@@ -13,6 +13,9 @@
     height: calc(100% - 28px);
     width: 100%;
     padding: 10px 20px;
+    position: relative;
+    background-color: var(--color-nav);
+    z-index: 110;
     
     justify-content: space-between;
 
@@ -29,7 +32,7 @@
     font-size: 35px;
     cursor: pointer;
     position: relative;
-    z-index: 100;
+    z-index: 99;
 }
 .cartAmount {
     font-size: 0.75rem;
@@ -56,7 +59,7 @@
     position: relative;
     gap: 0.5em;
     top: -50vh;
-    z-index: 99;
+    z-index: 50;
     width: 100vw;
     max-height: 146px;
     min-height: 50vh;
@@ -81,7 +84,7 @@
     height: 100%;
     display: block;
     position: relative;
-    z-index: 100;
+    z-index: 110;
 }
 
 .logo img {
@@ -94,12 +97,13 @@
     font-size: 30px;
     color: white;
     position: relative;
-    z-index: 100;
+    z-index: 110;
 }
 
 .dropdown {
     left: 100%;
     position: absolute;
+    z-index: 105;
     top: 0;
     transition: all 0.5s ease-in-out;
     display: flex;
@@ -131,6 +135,8 @@
     padding: 7.5px 0;
     /* height: 5vh; */
     text-align: center;
+    position: relative;
+    z-index: 51;
 }
 .shipping p {
     display: flex;
