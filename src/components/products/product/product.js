@@ -15,14 +15,14 @@ const Product = ({product}) => {
     return (
         <div className={styles.productCard}>
             <div className={styles.productImage}>
-                <Image className={styles.productPic} src={'/products/product1.jpg'} alt={product.title} width={595} height={595} />
+                <Image className={styles.productPic} src={product.image} alt={product.title} width={595} height={595} />
                 <div className={`${styles.productDiscount} ${squarepegFont.className}`} style={{display: product.discountInPercent > 0 ? 'block' : 'none'}}><br/><DiscountBox percent={product.discountInPercent}/></div>
             </div>
 
             <div className={styles.productInfo}>
                 <div className={styles.productDescription}>
                     <p className={styles.productBrand}>{product.title}</p>
-                    <p className={styles.productTitle}>Tandlægesæt i træ</p>
+                    <p className={styles.productTitle}>{product.description}</p>
                 </div>
                 <p className={styles.price}>{product.price},00 kr.</p>
             </div>

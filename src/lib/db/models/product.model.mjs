@@ -3,6 +3,7 @@ mongoose.set('runValidators', true);
 
 const productSchema = new Schema({
   title: { type: String, default: null },
+  description: { type: String, default: null },
   image: { type: String, default: '/products/no-product.jpg' },
   price: { type: Number, default: null },
   discountInPercent: { type: Number, default: 0 },
