@@ -24,7 +24,7 @@ const Product = ({product}) => {
                     <p className={styles.productBrand}>{product.title}</p>
                     <p className={styles.productTitle}>{product.description}</p>
                 </div>
-                <p className={styles.price}>{product.price},00 kr.</p>
+                <p className={styles.price}>{product.price} kr.</p>
             </div>
                 <button className={styles.productBuyBtn} onClick={() => addToBasket(product._id, product.amount)}>Køb</button>
                 {/* <button className={styles.productBuyBtn}>Køb</button> */}
